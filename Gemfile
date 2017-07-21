@@ -55,3 +55,9 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 # Bootstrap
 gem 'bootstrap-sass'
 gem 'autoprefixer-rails'
+
+# Bootswatch
+gem 'bootswatch-rails'
+
+gem 'font-awesome-rails'
+gem 'jquery-easing-rails'
