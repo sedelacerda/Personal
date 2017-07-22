@@ -14,6 +14,8 @@
  *= require_self
  */
 
+// Basado en https://github.com/BlackrockDigital/startbootstrap-freelancer
+
 // Import bootstrap
 @import "bootstrap-sprockets"
 @import "bootstrap"
@@ -52,7 +54,7 @@ h5,
 h6
   font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif
   text-transform: uppercase
-  font-weight: 700
+  font-weight: 600
 
 hr.star-light,
 hr.star-primary
@@ -225,9 +227,16 @@ section.success
   position: relative
   max-width: 400px
   margin: 0 auto
+  background: radial-gradient(circle, #FFF, #2196F3)
+  outline: none
+  border-radius: 15px
+  border-color: #616161
+  box-shadow: 0 0 10px #616161
+  padding-top: 20px
+  padding-bottom: 20px
 
 #portfolio .portfolio-item .portfolio-link .caption
-  background: rgba(24, 188, 156, 0.9)
+  background: rgba(33, 150, 243, 0.9)
   position: absolute
   width: 100%
   height: 100%
@@ -235,6 +244,11 @@ section.success
   transition: all ease 0.5s
   -webkit-transition: all ease 0.5s
   -moz-transition: all ease 0.5s
+  margin-top: -20px
+  border-radius: 20px
+
+#portfolio .portfolio-item .portfolio-image
+  margin: 0 auto
 
 #portfolio .portfolio-item .portfolio-link .caption:hover
   opacity: 1
@@ -320,30 +334,38 @@ footer h3
   margin-bottom: 30px
 
 footer .footer-above
-  padding-top: 50px
+  padding-top: 30px
   background-color: #1565C0
 
 footer .footer-col
-  margin-bottom: 50px
+  margin-bottom: 30px
 
 footer .footer-below
   padding: 25px 0
   background-color: #233140
 
-.btn-outline
+.btn-outline,
+.btn-download
   color: white
   font-size: 20px
   border: solid 2px white
   background: transparent
   transition: all 0.3s ease-in-out
-  margin-top: 15px
+  margin-top: 5px
 
 .btn-outline:hover,
 .btn-outline:focus,
 .btn-outline:active,
 .btn-outline.active
-  color: #2196F3
+  color: #1565C0
   background: white
+  border: solid 2px white
+
+.btn-download:hover,
+.btn-download:focus,
+.btn-download:active,
+.btn-download.active
+  background: #1565C0
   border: solid 2px white
 
 .btn-primary
@@ -542,3 +564,7 @@ fieldset[disabled] .btn-success.active
 
 div#maincontent
   outline: none
+
+#about a
+  color: white
+  font-weight: bold
