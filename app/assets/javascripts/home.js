@@ -51,4 +51,24 @@ $(document).ready(function(){
       $('#success').html('');
   });
 
+  // Validar email
+  $("#email").on("input", function(){
+    var email = $("#email").val();
+    var filter = /^([\w-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([\w-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$/;
+    if (!filter.test(email)) {
+      $(this).css('color', 'red');
+    } else {
+      $(this).css('color', '#555555');
+      $(".invalid-email").empty();
+    }
+  });
+
+  $('#submit-contact').click(function() {
+    var email = $("#email").val();
+    var filter = /^([\w-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([\w-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$/;
+    if (!filter.test(email)) {
+      alert("Debes ingresar un correo electrónico válido")
+    }
+  });
+
 });
