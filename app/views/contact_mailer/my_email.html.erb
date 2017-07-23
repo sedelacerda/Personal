@@ -4,13 +4,18 @@
     <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
   </head>
   <body>
+    <h3><%= @user[:name].to_s %> te ha contactado!</h3>
     <p>
-      You have successfully signed up to example.com,
-      your username is: .<br>
+      <strong>Nombre:</strong> <%= @user[:name].to_s %>
     </p>
     <p>
-      To login to the site, just follow this link:.
+      <strong>Email:</strong> <%= @user[:email].to_s %>
     </p>
-    <p>Thanks for joining and have a great day!</p>
+    <p>
+      <strong>Número de teléfono:</strong> <%= @user[:phone_number].to_s %>
+    </p>
+    <p>
+      <strong>Mensaje:</strong> <%= @user[:message].to_s %>
+    </p>
   </body>
 </html>

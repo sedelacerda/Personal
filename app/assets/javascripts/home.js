@@ -1,6 +1,6 @@
 $(document).ready(function(){
   "use strict";
-  
+
   $('[data-toggle="tooltip"]').tooltip();
 
   $('.page-scroll a').bind('click', function(event) {
