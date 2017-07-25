@@ -33,11 +33,37 @@ body
   font-family: 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif
   overflow-x: hidden
 
-p
-  font-size: 20px
+@mixin responsive-font($responsive, $min, $max: false, $fallback: false)
 
-p.small
-  font-size: 16px
+  $responsive-unitless: $responsive / ($responsive - $responsive + 1)
+  $dimension: if(unit($responsive) == 'vh', 'height', 'width')
+  $min-breakpoint: $min / $responsive-unitless * 100
+
+  @media (max-#{$dimension}: #{$min-breakpoint})
+    font-size: $min
+
+  @if $max
+    $max-breakpoint: $max / $responsive-unitless * 100
+
+    @media (min-#{$dimension}: #{$max-breakpoint})
+      font-size: $max
+
+  @if $fallback
+    font-size: $fallback
+
+  font-size: $responsive
+
+
+
+h1
+  font-size: 5.9vw
+
+h2
+  font-size: 3.0vh
+
+p
+  @include responsive-font(3vw, 18px, 20px)
+
 
 a,
 a:hover,
