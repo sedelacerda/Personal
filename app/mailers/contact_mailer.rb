@@ -1,5 +1,4 @@
 class ContactMailer < ApplicationMailer
-  default from: 'projectyapo@gmail.com'
   layout "mailer"
 
   def user_email(user, email)

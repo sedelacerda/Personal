@@ -61,3 +61,6 @@ gem 'bootswatch-rails'
 
 gem 'font-awesome-rails'
 gem 'jquery-easing-rails'
+
+# SendGrid
+gem 'sendgrid-ruby'

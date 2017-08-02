@@ -126,14 +126,14 @@ $(document).ready(function(){
             $('#contactForm').trigger("reset");
           },
           error: function() {
-            // Fail message
+            // Enable button & show fail message
+            $("#btnSubmit").attr("disabled", false);
+            $("#btnSubmit").html("Enviar");
             $('#success').html("<div class='alert alert-danger'>");
             $('#success > .alert-danger').html("<button type='button' class='close' data-dismiss='alert' aria-hidden='true'>&times;")
             .append("</button>");
             $('#success > .alert-danger').append("<strong>Perdón " + firstName + ", en estos momentos mi servidor de correo no está respondiendo. Por favor inténtalo de nuevo más tarde o escríbeme un correo a sedelacerda@uc.cl");
             $('#success > .alert-danger').append('</div>');
-            //clear all fields
-            $('#contactForm').trigger("reset");
           },
         });
       },
